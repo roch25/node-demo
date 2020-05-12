@@ -1,12 +1,21 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+
+app.use(cors());
 
 app.get("/", (req, res) => {
-    res.json({message: "henlos :D"});
+    res.send("henlos :D");
 });
 
-require("./routes/routes")(app);
+app.get("/animals", (req, res) => {
+    res.send(":3");
+});
 
-app.listen(3000, () => {
-    console.log("Server is running on port 3000 --- http://localhost:3000/");
+const animals = require("./routes/routes");
+animals.doggos(app);
+animals.pandas(app);
+
+app.listen(3001, () => {
+    console.log("Server is running on port 3001 --- http://localhost:3001/");
 });

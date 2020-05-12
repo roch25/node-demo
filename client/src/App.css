@@ -1,0 +1,13 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0.5vh;
+  background-color: #292929;
+  color: white;
+}
+
+td, th {
+  float: center;
+  padding: 5px;
+}
+
+/*# sourceMappingURL=App.css.map */
