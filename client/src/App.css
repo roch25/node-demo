@@ -1,8 +1,38 @@
+/* Colors */
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0.5vh;
-  background-color: #292929;
+  background-color: #201b1b;
+  background-attachment: fixed;
   color: white;
+}
+
+.App-header {
+  min-height: 15vh;
+}
+.App .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.App .header ul {
+  display: flex;
+}
+.App .header ul li {
+  list-style: none;
+}
+.App .header ul li p {
+  cursor: pointer;
+  padding: 5px;
+}
+.App .header ul li .navh {
+  width: inherit;
+  height: 2px;
+  visibility: hidden;
+  background-color: white;
+}
+.App .header ul li:hover .navh {
+  visibility: visible;
 }
 
 td, th {

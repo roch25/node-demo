@@ -7,17 +7,25 @@ class AnimalList extends React.Component{
     }
     render(){
         const list = this.props.list;
-        console.log(list);
+        let keys;
+        list.map((item) => {
+            keys = Object.keys(item); // issue*
+            keys.map(item => {
+                console.log(item);
+            })
+        })
         return (
             <ul> 
-             <table className = 'table'>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Breed</th>
-                </tr>
-                {list.map(item => (<ListItem li = {item}/>))}   
-            </table>
+                <table className = 'table'>
+                    <thead>
+                    {
+                        keys.map(item => (<th>{item}</th>)) // issue*
+                    }
+                    </thead>
+                    <tbody>
+                    {list.map(item => (<ListItem li = {item}/>))}   
+                    </tbody>
+                </table>
             </ul>
         );
     }

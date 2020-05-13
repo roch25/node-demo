@@ -5,7 +5,7 @@ class ListItem extends React.Component{
         super(props);
     }
     render(){
-        const listItem = this.props.li;
+        const listItem = this.props.li;  
         return (
             <tr>
                 <td>{listItem.id}</td>
